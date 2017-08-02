@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>login</title>
+</head>
+<body>
+	<form action="/studyWebFilter/LoginServlet" method="post">
+		<table border="1" align="center">
+			<caption>自动登录</caption>
+			<tr>
+				<th>用户名</th>
+				<td><input type="text" name="username"/></td>
+			</tr>
+			<tr>
+				<th>密码</th>
+				<td><input type="password" name="password"/></td>
+			</tr>
+			<tr>
+				<th>登录时间</th>
+				<td>
+					<input type="radio" name="time" value="60"/>1分钟
+					<input type="radio" checked="checked" name="time" value="180"/>3分钟
+					<input type="radio" name="time" value="300"/>5分钟
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="提交"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
