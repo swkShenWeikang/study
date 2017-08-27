@@ -3,13 +3,7 @@ package com.swk.autowiring.soundsystem;
 import org.springframework.stereotype.Component;
 
 /**
- * 
- * @author 慎伟康
- * 
- * @date 2017年8月27日 下午6:25:11
- * 
- * @Description TODO
- *		一个CD实现
+ * 一个CD实现
  */
 @Component
 public class CdDavid implements CompactDisc {
