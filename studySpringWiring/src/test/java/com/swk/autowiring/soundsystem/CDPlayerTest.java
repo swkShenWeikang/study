@@ -9,17 +9,14 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * 
- * @author 慎伟康
- * 
- * @date 2017年8月27日 下午6:30:48
- * 
- * @Description TODO
- *		测试
+ * 测试
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=CDPlayerConfig.class)
 public class CDPlayerTest {
+	
+	@Autowired(required=false)//谨慎使用
+	private MediaPlayer player;
 	
 	@Autowired
 	private CompactDisc cd;
@@ -27,6 +24,18 @@ public class CDPlayerTest {
 	@Test
 	public void cdShouldNotBeNull(){
 		assertNotNull(cd);
+		System.out.println("ok...");
+	}
+	
+	@Test
+	public void playerShouldNotBeNull(){
+		assertNotNull(player);
+		System.out.println("ok...");
+	}
+	
+	@Test
+	public void play(){
+		player.play();
 	}
 	
 }
