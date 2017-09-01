@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import com.swk.annotation.concert.aspect.Audience;
+import com.swk.annotation.concert.introduction.EncoreableIntroducer;
 import com.swk.annotation.concert.pointcut.Concert;
 
 @Configuration
@@ -19,5 +20,10 @@ public class AopAnnotationConfig {
 	@Bean
 	public Audience audience(){
 		return new Audience();
+	}
+	
+	@Bean
+	public EncoreableIntroducer encoreableIntroducer(){
+		return new EncoreableIntroducer();
 	}
 }
